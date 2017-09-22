@@ -8,7 +8,8 @@ class App extends Component {
         super(props);
         this.state = {
             followers: [],
-            getFollowersFrom: ""
+            getFollowersFrom: "",
+            getRepositories: []
         };
     }
 
@@ -24,13 +25,20 @@ class App extends Component {
         this.setState({followers: followers.data}));
     }
 
+    getRepositories(url){
+      fetch(url)
+      .then(res => res.json())
+      .then(repositories => 
+        this.setState({getRepositories: repositories.data}));
+    }
+
     render() {
         return (<div>
           <h1>Followers</h1>
           <div>
             <SearchBox getFollowers={this.getFollowers.bind(this)}/>
           </div>
-          <User followers={this.state.followers} changeName={this.getFollowers.bind(this)}/>
+          <User followers={this.state.followers} changeName={this.getFollowers.bind(this)} repositories={this.getRepositories.bind(this)}/>
           </div>);
         }
 }

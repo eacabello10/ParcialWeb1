@@ -9,3 +9,7 @@ div .box{
   width: auto;
   height: auto;
 }
+
+.repoBlock{
+  display: none;
+}
