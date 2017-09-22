@@ -16,7 +16,7 @@ class User extends Component {
 
 	render(){
 		return(<div>
-			{this.renderFollowers()}
+			{this.props.followers ? this.renderFollowers() : "Ingrese un usuario"}
 			</div>);
 	}
 }
