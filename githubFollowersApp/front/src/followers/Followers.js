@@ -8,12 +8,9 @@ import PropTypes from "prop-types";
 
 	render(){
 		return(<div>
-			<div className="login">Follower Login: {this.props.Follower.login}</div>
+			<div className="login">Follower Login: <a href={this.props.followers.followers_url}>{this.props.followers.login}</a></div>
+			</div>);
 			}
 }
-
-Follower.propTypes = {
-    follower : PropTypes.object.isRequired
-};
 
 export default Follower;

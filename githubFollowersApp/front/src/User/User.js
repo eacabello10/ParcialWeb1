@@ -1,15 +1,16 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
 
-import Follower from "./followers/Follower.js";
+import Follower from "../followers/Followers.js";
+
 class User extends Component {
 	constructor(props) {
 		super(props);
 	}
 
 	renderFollowers() {
-		return this.props.followers.map((f,i) => {
-			return <Follower follower= {f} key={i}/>;
+		return this.props.followers.map((g,i) => {
+			return <Follower followers= {g} key={i}/>;
 		});
 	}
 
@@ -19,9 +20,5 @@ class User extends Component {
 			</div>);
 	}
 }
-
-User.propTypes = {
-    user : PropTypes.array.isRequired
-};
 
 export default User;

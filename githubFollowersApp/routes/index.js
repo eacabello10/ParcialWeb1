@@ -6,7 +6,7 @@ var githubapi = require("github");
 
 /* GET home page. */
 router.get('/getFollowers/:user', function(req, res, next) {
-
+	console.log(req.params.user);
     var github = new githubapi({});
 
     github.users.getFollowingForUser({
