@@ -6,11 +6,9 @@ import PropTypes from "prop-types";
 		super(props);
 	}
 
-	
-
 	render(){
 		return(<div>
-			<div className="login">Follower Login: <a href={this.props.search.followers_url} onClick="">{this.props.followers.login}</a></div>
+			<div className="login">Follower Login: <a href={this.props.followers.followers_url}>{this.props.followers.login}</a></div>
 			</div>);
 			}
 }
