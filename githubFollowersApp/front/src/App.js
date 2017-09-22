@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import User from "./User/User.js";
 import SearchBox from "./searchBox/SearchBox.js";
+import "./App.css";
 
 class App extends Component {
     constructor(props) {
@@ -9,12 +10,6 @@ class App extends Component {
             followers: [],
             getFollowersFrom: ""
         };
-    }
-
-    nombreActualizado(name){
-      this.setState({
-        getFollowersFrom: name
-      });
     }
 
     getFollowers(userLogin)
