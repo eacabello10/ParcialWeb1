@@ -11,6 +11,12 @@ class App extends Component {
         };
     }
 
+    nombreActualizado(name){
+      this.setState({
+        getFollowersFrom: name
+      });
+    }
+
     getFollowers(userLogin)
     {
       var url = "getFollowers/" + userLogin;
@@ -27,9 +33,9 @@ class App extends Component {
         return (<div>
           <h1>Followers</h1>
           <div>
-            <SearchBox search={this.getFollowers.bind(this)}/>
+            <SearchBox getFollowers={this.getFollowers.bind(this)}/>
           </div>
-          <User followers={this.state.followers}/>
+          <User followers={this.state.followers} changeName={this.getFollowers.bind(this)}/>
           </div>);
         }
 }

@@ -7,7 +7,7 @@ class SearchBox extends Component{
 
 	onEnter(evt){
 		if (evt.key === 'Enter') {
-      this.props.search(evt.target.value);
+      this.props.getFollowers(evt.target.value);
     	}
 	}
 

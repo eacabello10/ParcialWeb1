@@ -10,7 +10,7 @@ class User extends Component {
 
 	renderFollowers() {
 		return this.props.followers.map((g,i) => {
-			return <Follower followers= {g} key={i}/>;
+			return <Follower followers= {g} key={i} changeName={this.props.changeName.bind(this)}/>;
 		});
 	}
 

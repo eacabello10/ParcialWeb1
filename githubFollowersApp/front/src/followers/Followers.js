@@ -7,8 +7,9 @@ import PropTypes from "prop-types";
 	}
 
 	render(){
+		var changeName = this.props.changeName;
 		return(<div>
-			<div className="login">Follower Login: <a href={this.props.followers.followers_url}>{this.props.followers.login}</a></div>
+			<div className="login">Follower Login: <button onClick={() => changeName(this.props.followers.login)}>{this.props.followers.login}</button></div>
 			</div>);
 			}
 }
