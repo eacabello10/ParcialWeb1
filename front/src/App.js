@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import User from "./User/User.js";
-import SearchBox from "./searchBox/SearchBox.js";
+import SearchBox from "./searchBox/searchBox.js";
 import "./App.css";
 
 class App extends Component {
