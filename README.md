@@ -5,9 +5,9 @@ Para que funcione la aplicacion solos se debe digitar el nombre de un usuario en
 
 Para usar la aplicación de manera local, despues de clonar el repositorio:
 
--cd ParcialWeb1
--npm install && npm start
--cd front
--npm run build
+.. cd ParcialWeb1
+.. npm install && npm start
+.. cd front
+.. npm run build
 
 https://githubfollowersapped.herokuapp.com/  <--link de la aplicación desplegada
